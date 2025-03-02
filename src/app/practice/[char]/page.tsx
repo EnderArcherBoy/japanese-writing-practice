@@ -1,24 +1,25 @@
 "use client";
 import { useParams } from "next/navigation";
 import WritingPractice from "@/components/Canvas";
-import StrokeOrder from "@/components/StrokeOrder";
+import Link from "next/link";
 
 export default function PracticePage() {
-  const { char } = useParams();
-  const decodedChar = decodeURIComponent(char);
+  const params = useParams();
+  // Safely handle string or array of strings
+  const charParam = Array.isArray(params.char) ? params.char[0] : params.char;
+  const decodedChar = charParam ? decodeURIComponent(charParam) : '';
 
   return (
     <main className="flex flex-col items-center p-4">
-      <h1 className="text-2xl font-bold mb-4">{decodedChar} - Writing Practice</h1>
+      <h1 className="text-2xl font-bold mb-4">
+        <Link href="/" className="hover:underline">
+          Japanese Writing Practice
+        </Link>
+        {" > "}{decodedChar}
+      </h1>
       
-      {/* Container for Stroke Order + Canvas */}
-      <div className="relative w-[700px] h-[500px]">
-        {/* Stroke Order Overlay with adjusted opacity and sizing */}
-        <StrokeOrder character={decodedChar} className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none" />
-
-        {/* Writing Practice Canvas */}
-        <WritingPractice character={decodedChar} />
-      </div>
+      {/* The StrokeOrder component is now handled inside WritingPractice */}
+      <WritingPractice character={decodedChar} />
     </main>
   );
 }
