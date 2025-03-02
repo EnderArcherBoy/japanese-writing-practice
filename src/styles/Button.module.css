@@ -1,0 +1,31 @@
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.undo,
+.redo,
+.goBack,
+.toggle {
+    background-color: #d1d5db;
+    /* Gray-300 */
+}
+
+.clear {
+    background-color: #fca5a5;
+    /* Red-300 */
+}
