@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { toHiragana, toKatakana } from "wanakana";
 import kanjiDataRaw from "@/data/kanji.json" assert { type: "json" };
-type KanjiDataType = Record<string, { jlpt_new?: number }>;
+// Update the type to accept null values for jlpt_new
+type KanjiDataType = Record<string, { jlpt_new?: number | null }>;
 const kanjiData = kanjiDataRaw as KanjiDataType;
 
 // Define Gojuon order
@@ -25,7 +26,7 @@ katakana.push(["ワ", "ヲ"]);
 hiragana.push(["ん"]);
 katakana.push(["ン"]);
 
-// Function to get Kanji by JLPT level
+// Function to get Kanji by JLPT level - modify to handle null values
 const getKanjiByJLPT = (level: number) => {
   return Object.keys(kanjiData)
     .filter((kanji) => kanjiData[kanji].jlpt_new === level)
