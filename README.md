@@ -41,7 +41,7 @@ A web-based tool for practicing Japanese writing. This project is designed to he
 
 - **Undo**: `Ctrl + Z`
 - **Redo**: `Ctrl + Y`
-- **Clear Canvas**: Button or `Ctrl + C`
+- **Clear Canvas**: Button or `Ctrl + Shift + X`
 
 ## Technologies Used
 
