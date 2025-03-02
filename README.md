@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Japanese Writing Practice
 
-## Getting Started
+A web-based tool for practicing Japanese writing. This project is designed to help learners practice Hiragana, Katakana, and Kanji with stroke order guidance and recognition. It supports both Practice Mode (with stroke order instructions) and Testing Mode (with a blank canvas) to cater to different learning styles.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Practice Mode**: Guides you through the correct stroke order for Hiragana, Katakana, and Kanji characters.
+- **Testing Mode**: Provides a blank canvas where you can practice writing characters from memory.
+- **Simple and Minimalist UI**: No distractions, just the tools you need to practice.
+- **Character Set**: Choose between Hiragana, Katakana, and Kanji, with characters sorted by JLPT level.
+- **Stroke Order Tutorial**: Learn the correct stroke order for each character in Practice Mode.
+- **Dark Mode**: Toggle between light and dark themes.
+- **Compatibility**: Works with mouse, touchscreen, or drawing tablet for input.
+  
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/EnderArcherBoy/japanese-writing-practice.git
+    ```
+   
+2. Install dependencies:
+    ```bash
+    cd japanese-writing-practice
+    npm install
+    ```
+   
+3. Run the development server:
+    ```bash
+    npm run dev
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Open your browser and go to `http://localhost:3000` to start practicing!
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
 
-## Learn More
+- On the homepage, you can select a character set (Hiragana, Katakana, Kanji).
+- Click on any character to open the practice canvas where you can either practice with stroke order guidance or test your memory in Testing Mode.
 
-To learn more about Next.js, take a look at the following resources:
+### Keyboard Shortcuts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Undo**: `Ctrl + Z`
+- **Redo**: `Ctrl + Y`
+- **Clear Canvas**: Button or `Ctrl + C`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+- React.js
+- WanaKana for Hiragana and Katakana support
+- `kanji.json` from the kanji-data repository for Kanji characters
+- Tailwind CSS (for styling)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feel free to fork this repo and make contributions! If you encounter any bugs or have suggestions for improvement, open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
