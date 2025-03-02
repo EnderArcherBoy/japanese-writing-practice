@@ -47,7 +47,7 @@ A web-based tool for practicing Japanese writing. This project is designed to he
 
 - React.js
 - WanaKana for Hiragana and Katakana support
-- `kanji.json` from the kanji-data repository for Kanji characters
+- `kanji.json` from the kanjiVG repository https://github.com/KanjiVG/kanjivg for all Japanese characters
 - Tailwind CSS (for styling)
 
 ## Contributing
