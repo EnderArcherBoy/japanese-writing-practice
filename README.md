@@ -9,7 +9,6 @@ A web-based tool for practicing Japanese writing. This project is designed to he
 - **Simple and Minimalist UI**: No distractions, just the tools you need to practice.
 - **Character Set**: Choose between Hiragana, Katakana, and Kanji, with characters sorted by JLPT level.
 - **Stroke Order Tutorial**: Learn the correct stroke order for each character in Practice Mode.
-- **Dark Mode**: Toggle between light and dark themes.
 - **Compatibility**: Works with mouse, touchscreen, or drawing tablet for input.
   
 ## Installation
