@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
 import { toHiragana, toKatakana } from "wanakana";
-import kanjiData from "@/data/kanji.json";
+import kanjiDataRaw from "@/data/kanji.json" assert { type: "json" };
+type KanjiDataType = Record<string, { jlpt_new?: number }>;
+const kanjiData = kanjiDataRaw as KanjiDataType;
 
 // Define Gojuon order
 const baseSounds = ["a", "i", "u", "e", "o"];

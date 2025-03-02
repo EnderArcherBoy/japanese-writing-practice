@@ -12,7 +12,6 @@ export default function WritingPractice({ character }: { character: string }) {
   const [redoStack, setRedoStack] = useState<{ x: number; y: number }[][]>([]);
   const [showGuide, setShowGuide] = useState(true);
   const [guideOnTop, setGuideOnTop] = useState(false);
-  const [canvasInitialized, setCanvasInitialized] = useState(false);
 
   // Initialize canvas once on mount with better performance handling
   useEffect(() => {
@@ -44,7 +43,6 @@ export default function WritingPractice({ character }: { character: string }) {
     // Clear any previous drawings when component mounts with a new character
     pathsRef.current = [];
     setRedoStack([]);
-    setCanvasInitialized(true);
   }, [character]);
 
   // More efficient redraw function with fewer state updates
